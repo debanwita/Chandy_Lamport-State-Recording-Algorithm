@@ -1,0 +1,708 @@
+Enter the number of processes: 
+4
+Enter the adjacency matrix
+0 1 1 0
+1 0 0 1
+0 1 0 1
+0 1 0 0
+
+The adjacency matrix is
+ 
+0  1  1  0  
+1  0  0  1  
+0  1  0  1  
+0  1  0  0  
+
+Name of channel-1  12
+Name of channel-2  13
+Name of channel-3  21
+Name of channel-4  24
+Name of channel-5  32
+Name of channel-6  34
+Name of channel-7  42
+
+Details of Message 1
+--------------------
+	Name :M1
+	Sender: 1
+	Channel Name: 13
+Do you want to continue? (1/0):1
+
+Details of Message 2
+--------------------
+	Name :M2
+	Sender: 3
+	Channel Name: 32
+Do you want to continue? (1/0):1
+
+Details of Message 3
+--------------------
+	Name :M3
+	Sender: 3
+	Channel Name: 32
+Do you want to continue? (1/0):1
+
+Details of Message 4
+--------------------
+	Name :M4
+	Sender: 1
+	Channel Name: 12
+Do you want to continue? (1/0):1
+
+Details of Message 5
+--------------------
+	Name :M5
+	Sender: 4
+	Channel Name: 42
+Do you want to continue? (1/0):0
+
+Enter the initiator node : 1
+
+***Process states:***
+-------------------------
+	Process 1
+		Send msg: 
+			[M1, M4]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 2
+		Send msg: 
+			EMPTY
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 0
+
+	Process 3
+		Send msg: 
+			[M2, M3]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 0
+
+	Process 4
+		Send msg: 
+			[M5]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 0
+
+
+***Channel states:***
+------------------------
+	Channel 12
+		Messages: 
+			[M4, Marker]
+			Record Bit: 0
+
+	Channel 13
+		Messages: 
+			[M1, Marker]
+			Record Bit: 0
+
+	Channel 21
+		Messages: 
+			EMPTY
+
+			Record Bit: 0
+
+	Channel 24
+		Messages: 
+			EMPTY
+
+			Record Bit: 0
+
+	Channel 32
+		Messages: 
+			[M2, M3]
+			Record Bit: 0
+
+	Channel 34
+		Messages: 
+			EMPTY
+
+			Record Bit: 0
+
+	Channel 42
+		Messages: 
+			[M5]
+			Record Bit: 0
+
+The state recording order
+[1]
+--------------------------------------------------------
+
+***Process states:***
+-------------------------
+	Process 1
+		Send msg: 
+			[M1, M4]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 2
+		Send msg: 
+			EMPTY
+		Receive msg(before state recording): 
+			[M4]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 3
+		Send msg: 
+			[M2, M3]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 0
+
+	Process 4
+		Send msg: 
+			[M5]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 0
+
+
+***Channel states:***
+------------------------
+	Channel 12
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 13
+		Messages: 
+			[M1, Marker]
+			Record Bit: 0
+
+	Channel 21
+		Messages: 
+			[Marker]
+			Record Bit: 0
+
+	Channel 24
+		Messages: 
+			[Marker]
+			Record Bit: 0
+
+	Channel 32
+		Messages: 
+			[M2, M3]
+			Record Bit: 0
+
+	Channel 34
+		Messages: 
+			EMPTY
+
+			Record Bit: 0
+
+	Channel 42
+		Messages: 
+			[M5]
+			Record Bit: 0
+
+The state recording order
+[1, 2]
+--------------------------------------------------------
+
+***Process states:***
+-------------------------
+	Process 1
+		Send msg: 
+			[M1, M4]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 2
+		Send msg: 
+			EMPTY
+		Receive msg(before state recording): 
+			[M4]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 3
+		Send msg: 
+			[M2, M3]
+		Receive msg(before state recording): 
+			[M1]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 4
+		Send msg: 
+			[M5]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 0
+
+
+***Channel states:***
+------------------------
+	Channel 12
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 13
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 21
+		Messages: 
+			[Marker]
+			Record Bit: 0
+
+	Channel 24
+		Messages: 
+			[Marker]
+			Record Bit: 0
+
+	Channel 32
+		Messages: 
+			[M2, M3, Marker]
+			Record Bit: 0
+
+	Channel 34
+		Messages: 
+			[Marker]
+			Record Bit: 0
+
+	Channel 42
+		Messages: 
+			[M5]
+			Record Bit: 0
+
+The state recording order
+[1, 2, 3]
+--------------------------------------------------------
+
+***Process states:***
+-------------------------
+	Process 1
+		Send msg: 
+			[M1, M4]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 2
+		Send msg: 
+			EMPTY
+		Receive msg(before state recording): 
+			[M4]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 3
+		Send msg: 
+			[M2, M3]
+		Receive msg(before state recording): 
+			[M1]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 4
+		Send msg: 
+			[M5]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 0
+
+
+***Channel states:***
+------------------------
+	Channel 12
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 13
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 21
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 24
+		Messages: 
+			[Marker]
+			Record Bit: 0
+
+	Channel 32
+		Messages: 
+			[M2, M3, Marker]
+			Record Bit: 0
+
+	Channel 34
+		Messages: 
+			[Marker]
+			Record Bit: 0
+
+	Channel 42
+		Messages: 
+			[M5]
+			Record Bit: 0
+
+The state recording order
+[1, 2, 3]
+--------------------------------------------------------
+
+***Process states:***
+-------------------------
+	Process 1
+		Send msg: 
+			[M1, M4]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 2
+		Send msg: 
+			EMPTY
+		Receive msg(before state recording): 
+			[M4]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 3
+		Send msg: 
+			[M2, M3]
+		Receive msg(before state recording): 
+			[M1]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 4
+		Send msg: 
+			[M5]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+
+***Channel states:***
+------------------------
+	Channel 12
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 13
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 21
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 24
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 32
+		Messages: 
+			[M2, M3, Marker]
+			Record Bit: 0
+
+	Channel 34
+		Messages: 
+			[Marker]
+			Record Bit: 0
+
+	Channel 42
+		Messages: 
+			[M5, Marker]
+			Record Bit: 0
+
+The state recording order
+[1, 2, 3, 4]
+--------------------------------------------------------
+Deleted message is M2
+Deleted message is M3
+
+***Process states:***
+-------------------------
+	Process 1
+		Send msg: 
+			[M1, M4]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 2
+		Send msg: 
+			EMPTY
+		Receive msg(before state recording): 
+			[M4]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 3
+		Send msg: 
+			[M2, M3]
+		Receive msg(before state recording): 
+			[M1]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 4
+		Send msg: 
+			[M5]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+
+***Channel states:***
+------------------------
+	Channel 12
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 13
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 21
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 24
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 32
+		Messages: 
+			[M2, M3]
+			Record Bit: 1
+
+	Channel 34
+		Messages: 
+			[Marker]
+			Record Bit: 0
+
+	Channel 42
+		Messages: 
+			[M5, Marker]
+			Record Bit: 0
+
+The state recording order
+[1, 2, 3, 4]
+--------------------------------------------------------
+
+***Process states:***
+-------------------------
+	Process 1
+		Send msg: 
+			[M1, M4]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 2
+		Send msg: 
+			EMPTY
+		Receive msg(before state recording): 
+			[M4]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 3
+		Send msg: 
+			[M2, M3]
+		Receive msg(before state recording): 
+			[M1]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 4
+		Send msg: 
+			[M5]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+
+***Channel states:***
+------------------------
+	Channel 12
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 13
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 21
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 24
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 32
+		Messages: 
+			[M2, M3]
+			Record Bit: 1
+
+	Channel 34
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 42
+		Messages: 
+			[M5, Marker]
+			Record Bit: 0
+
+The state recording order
+[1, 2, 3, 4]
+--------------------------------------------------------
+Deleted message is M5
+
+***Process states:***
+-------------------------
+	Process 1
+		Send msg: 
+			[M1, M4]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 2
+		Send msg: 
+			EMPTY
+		Receive msg(before state recording): 
+			[M4]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 3
+		Send msg: 
+			[M2, M3]
+		Receive msg(before state recording): 
+			[M1]
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+	Process 4
+		Send msg: 
+			[M5]
+		Receive msg(before state recording): 
+			EMPTY
+		Receive msg(after state recording): 
+			EMPTY
+		Record Bit: 1
+
+
+***Channel states:***
+------------------------
+	Channel 12
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 13
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 21
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 24
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 32
+		Messages: 
+			[M2, M3]
+			Record Bit: 1
+
+	Channel 34
+		Messages: 
+			[EMPTY]
+			Record Bit: 1
+
+	Channel 42
+		Messages: 
+			[M5]
+			Record Bit: 1
+
+The state recording order
+[1, 2, 3, 4]
+--------------------------------------------------------
+The state recording order
+[1, 2, 3, 4]
